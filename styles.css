@@ -150,7 +150,8 @@ body {
 .btn-edit {
   display: none;
 }
-.detail:hover {
+.detail:hover,
+@media only screen and (max-width: 600px){
   .btn-edit,
   .btn-delete {
     display: block;
