@@ -33,7 +33,11 @@ body {
   grid-template-rows: 1fr 6fr;
   margin: 5vh;
 }
-
+@media only screen and (max-width: 600px) {
+  .main-app {
+    margin: 0;
+  }
+}
 /* HEADER */
 .header {
   display: flex;
