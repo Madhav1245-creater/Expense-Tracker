@@ -150,36 +150,8 @@ body {
 .btn-edit {
   display: none;
 }
-.detail:hover
-{
+.detail:hover{
   .btn-edit,
-  .btn-delete {
-    display: block;
-    font-size: 2rem;
-    position: absolute;
-    background-color: #fefefe;
-    padding: 0.5rem 0;
-    transition: all 0.3s;
-  }
-  .btn-edit {
-    right: -3rem;
-  }
-  .btn-delete {
-    left: -2.1rem;
-    background-color: red;
-    color: #fefefe;
-  }
-  .btn-delete:hover,
-  .btn-edit:hover {
-    transform: scale(1.1);
-  }
-  .btn-delete:active,
-  .btn-edit:active {
-    transform: scale(1);
-  }
-}
-@media only screen and (max-width: 600px){
-.btn-edit,
   .btn-delete {
     display: block;
     font-size: 2rem;
