@@ -107,16 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  transcationsContainer.addEventListener("click", function (e) {
-    if (e.target.classList.contains("delete")) {
-      const transcationElement = e.target.closest(".detail");
-      const idToDelete = transcationElement.getAttribute("data-id");
-
-      const indexToDelete = transcations.findIndex(
-        (transcation) => transcation.id === idToDelete
-      );
-
-      const updateDisplay = function () {
+const updateDisplay = function () {
         transcations.forEach((transcation) => {
           income = 0;
           expense = 0;
@@ -131,6 +122,17 @@ document.addEventListener("DOMContentLoaded", () => {
           expense = 0;
         }
       };
+  
+  transcationsContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete")) {
+      const transcationElement = e.target.closest(".detail");
+      const idToDelete = transcationElement.getAttribute("data-id");
+
+      const indexToDelete = transcations.findIndex(
+        (transcation) => transcation.id === idToDelete
+      );
+
+      
 
       if (indexToDelete !== -1) {
         transcations.splice(indexToDelete, 1);
@@ -188,6 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
           transactionToEdit.amount = newAmount;
           transactionToEdit.type = newType;
 
+          updateDisplay();
           saveToLocalStorage();
           updateUI();
 
